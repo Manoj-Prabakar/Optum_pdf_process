@@ -119,7 +119,7 @@ vsc.create_delta_sync_index(
 
 import mlflow.deployments
 
-question = "How does Australia's healthcare system balance universal access through Medicare with the role of private supplementary insurance, and what benefits do Australians gain from each?"
+question = "Find patient records related to Type 2 Diabetes treatment with Metformin"
 deploy_client = mlflow.deployments.get_deploy_client("databricks")
 response = deploy_client.predict(
     endpoint="embedding_aifoundry", inputs={"input": question})
